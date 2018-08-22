@@ -19,7 +19,7 @@ export default {
     name: 'ToolbarMenu',
     data: () => ({
         items: [{
-            icon: 'mdi-youtube',
+            icon: 'mdi-youtube-play',
             color: 'red darken-2',
             text: 'Youtube',
             link: 'https://www.youtube.com/clangsoul'
