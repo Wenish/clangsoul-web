@@ -1,9 +1,6 @@
 <template>
   <v-container fill-height>
-      <div class="home">
-        <img alt="Vue logo" src="../assets/logo.png">
-        <HelloWorld msg="Welcome to Your Vue.js App"/>
-      </div>
+      <div class="home">just vibe</div>
   </v-container>
 </template>
 
@@ -14,7 +11,6 @@ import HelloWorld from '@/components/HelloWorld.vue'
 export default {
   name: 'home',
   components: {
-    HelloWorld
   }
 }
 </script>
