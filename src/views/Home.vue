@@ -1,6 +1,9 @@
 <template>
   <v-container fill-height>
-      <div class="home">just vibe</div>
+      <div class="home">
+        <img class="img" alt="Clangsoul logo" src="../assets/logoClangsoulBlack.png">
+        just vibe
+      </div>
   </v-container>
 </template>
 
@@ -14,3 +17,9 @@ export default {
   }
 }
 </script>
+<style scoped>
+.img {
+    margin: auto;
+    width: 100%;
+}
+</style>
