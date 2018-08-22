@@ -1,62 +1,86 @@
 <template>
-    <v-navigation-drawer v-model="drawer" fixed clipped app>
-      <v-list dense>
-        <v-list-tile v-for="item in items" :key="item.text" @click="">
-          <v-list-tile-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title>
-              {{ item.text }}
-            </v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-        <v-subheader class="mt-3 grey--text text--darken-1">SUBSCRIPTIONS</v-subheader>
-        <v-list>
-          <v-list-tile v-for="item in items2" :key="item.text" avatar @click="">
-            <v-list-tile-avatar>
-              <img :src="`https://randomuser.me/api/portraits/men/${item.picture}.jpg`" alt="">
-            </v-list-tile-avatar>
-            <v-list-tile-title v-text="item.text"></v-list-tile-title>
-          </v-list-tile>
-        </v-list>
-        <v-list-tile class="mt-3" @click="">
-          <v-list-tile-action>
-            <v-icon color="grey darken-1">add_circle_outline</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-title class="grey--text text--darken-1">Browse Channels</v-list-tile-title>
-        </v-list-tile>
-        <v-list-tile @click="">
-          <v-list-tile-action>
-            <v-icon color="grey darken-1">settings</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-title class="grey--text text--darken-1">Manage Subscriptions</v-list-tile-title>
-        </v-list-tile>
-      </v-list>
-    </v-navigation-drawer>
+<v-navigation-drawer v-model="isNavbarOpen" fixed clipped app>
+  <v-list dense>
+    <v-list-tile v-for="item in items" :key="item.text" @click="">
+      <v-list-tile-action>
+        <v-icon>{{ item.icon }}</v-icon>
+      </v-list-tile-action>
+      <v-list-tile-content>
+        <v-list-tile-title>
+          {{ item.text }}
+        </v-list-tile-title>
+      </v-list-tile-content>
+    </v-list-tile>
+    <v-subheader class="mt-3">Follow me</v-subheader>
+    <v-list>
+      <v-list-tile v-for="item in items2" :key="item.text" avatar @click="">
+        <v-list-tile-action>
+          <v-icon>{{item.icon}}</v-icon>
+        </v-list-tile-action>
+        <v-list-tile-title v-text="item.text"></v-list-tile-title>
+      </v-list-tile>
+    </v-list>
+    <v-list-tile class="mt-3" @click="">
+      <v-list-tile-action>
+        <v-icon color="grey darken-1">add_circle_outline</v-icon>
+      </v-list-tile-action>
+      <v-list-tile-title>Browse Channels</v-list-tile-title>
+    </v-list-tile>
+    <v-list-tile @click="">
+      <v-list-tile-action>
+        <v-icon color="grey darken-1">settings</v-icon>
+      </v-list-tile-action>
+      <v-list-tile-title>Manage Subscriptions</v-list-tile-title>
+    </v-list-tile>
+  </v-list>
+</v-navigation-drawer>
 </template>
 
 <script>
-  export default {
-    data: () => ({
-      drawer: true,
-      items: [
-        { icon: 'trending_up', text: 'Most Popular' },
-        { icon: 'subscriptions', text: 'Subscriptions' },
-        { icon: 'history', text: 'History' },
-        { icon: 'featured_play_list', text: 'Playlists' },
-        { icon: 'watch_later', text: 'Watch Later' }
-      ],
-      items2: [
-        { picture: 28, text: 'Joseph' },
-        { picture: 38, text: 'Apple' },
-        { picture: 48, text: 'Xbox Ahoy' },
-        { picture: 58, text: 'Nokia' },
-        { picture: 78, text: 'MKBHD' }
-      ]
-    }),
-    props: {
-      source: String
+export default {
+  data: () => ({
+    drawer: true,
+    items: [{
+        icon: 'library_music',
+        text: 'Music'
+      },
+      {
+        icon: 'event',
+        text: 'Events'
+      }, {
+        icon: 'fas fa-search',
+        text: 'bla'
+      },
+    ],
+    items2: [{
+        icon: 'fas fa-youtube',
+        text: 'Joseph',
+        link: ''
+      },
+      {
+        icon: 'fas fa-facebook',
+        text: 'facebook',
+        link: ''
+      },
+      {
+        icon: 'fas fa-soundcloud',
+        text: 'Apple',
+        link: ''
+      },
+    ]
+  }),
+  props: {
+    source: String
+  },
+  computed: {
+    isNavbarOpen: {
+      get() {
+        return this.$store.state.navbar.isOpen
+      },
+      set(value) {
+        this.$store.commit('SET_NAVBAR', value)
+      }
     }
   }
+}
 </script>
