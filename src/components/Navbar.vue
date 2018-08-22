@@ -15,23 +15,11 @@
     <v-list>
       <v-list-tile v-for="item in items2" :key="item.text" avatar @click="">
         <v-list-tile-action>
-          <v-icon>{{item.icon}}</v-icon>
+          <v-icon large :color="item.color">{{item.icon}}</v-icon>
         </v-list-tile-action>
         <v-list-tile-title v-text="item.text"></v-list-tile-title>
       </v-list-tile>
     </v-list>
-    <v-list-tile class="mt-3" @click="">
-      <v-list-tile-action>
-        <v-icon color="grey darken-1">add_circle_outline</v-icon>
-      </v-list-tile-action>
-      <v-list-tile-title>Browse Channels</v-list-tile-title>
-    </v-list-tile>
-    <v-list-tile @click="">
-      <v-list-tile-action>
-        <v-icon color="grey darken-1">settings</v-icon>
-      </v-list-tile-action>
-      <v-list-tile-title>Manage Subscriptions</v-list-tile-title>
-    </v-list-tile>
   </v-list>
 </v-navigation-drawer>
 </template>
@@ -47,26 +35,38 @@ export default {
       {
         icon: 'event',
         text: 'Events'
-      }, {
-        icon: 'fas fa-search',
-        text: 'bla'
-      },
+      }
     ],
     items2: [{
-        icon: 'fas fa-youtube',
-        text: 'Joseph',
+        icon: 'mdi-youtube',
+        color: 'red darken-2',
+        text: 'Youtube',
         link: ''
       },
       {
-        icon: 'fas fa-facebook',
-        text: 'facebook',
+        icon: 'mdi-facebook',
+        color: 'blue darken-2',
+        text: 'Facebook',
         link: ''
       },
       {
-        icon: 'fas fa-soundcloud',
+        icon: 'mdi-soundcloud',
+        color: 'orange darken-2',
+        text: 'Soundcloud',
+        link: ''
+      },
+      {
+        icon: 'mdi-apple',
+        color: 'grey darken-1',
         text: 'Apple',
         link: ''
       },
+      {
+        icon: 'mdi-spotify',
+        color: 'teal darken-2',
+        text: 'Spotify',
+        link: ''
+      }
     ]
   }),
   props: {
