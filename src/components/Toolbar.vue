@@ -1,5 +1,5 @@
 <template>
-<v-toolbar dense fixed clipped-left app>
+<v-toolbar dense clipped-left>
     <!--<v-icon class="mx-3">fab fa-youtube</v-icon>-->
     <img class="img" alt="Clangsoul logo" src="../assets/logoClangsoulWhite.png">
     <v-toolbar-title class="mr-5 align-center">
