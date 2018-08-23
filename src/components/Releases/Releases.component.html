@@ -1,9 +1,12 @@
 <v-container grid-list-xl fluid>
   <v-layout align-center justify-center row fill-height wrap>
-    <v-flex v-for="n in 9" :key="n" xs12 sm6 md4 lg2 xl2>
-      <v-card tile>
-        <v-card-media :src="`https://unsplash.it/150/300?image=${Math.floor(Math.random() * 100) + 1}`" height="150px"></v-card-media>
-      </v-card>
+    <v-flex v-for="n in 9" :key="n" xs12 sm6 md4 lg3 xl2>
+      <Release
+      :title="n + ' title of song'"
+      :linkYoutube="'https://www.youtube.com/clangsoul'"
+      :linkSoundcloud="'https://www.youtube.com/clangsoul'"
+      :linkAppleMusic="'https://www.youtube.com/clangsoul'"
+      :linkSpotify="'https://www.youtube.com/clangsoul'"/>
     </v-flex>
   </v-layout>
 </v-container>
