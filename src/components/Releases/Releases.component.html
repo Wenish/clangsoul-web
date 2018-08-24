@@ -1,12 +1,12 @@
 <v-container grid-list-xl fluid>
   <v-layout align-center justify-center row fill-height wrap>
-    <v-flex v-for="n in 9" :key="n" xs12 sm6 md4 lg3 xl2>
+    <v-flex v-for="obj in getReleasesAsArray" :key="obj.id" xs12 sm6 md4 lg3 xl2>
       <Release
-      :title="n + ' title of song'"
-      :linkYoutube="'https://www.youtube.com/clangsoul'"
-      :linkSoundcloud="'https://www.youtube.com/clangsoul'"
-      :linkAppleMusic="'https://www.youtube.com/clangsoul'"
-      :linkSpotify="'https://www.youtube.com/clangsoul'"/>
+      :title="obj.title"
+      :linkYoutube="obj.linkYoutube"
+      :linkSoundcloud="obj.linkSoundcloud"
+      :linkAppleMusic="obj.linkAppleMusic"
+      :linkSpotify="obj.linkSpotify"/>
     </v-flex>
   </v-layout>
 </v-container>

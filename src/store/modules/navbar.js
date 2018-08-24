@@ -2,7 +2,7 @@ import * as getterNames from '../getterNames'
 import * as mutationTypes from '../mutationTypes'
 
 const state = {
-  isOpen: true
+  isOpen: false
 }
 
 const getters = {
