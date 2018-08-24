@@ -3,6 +3,7 @@
     <v-flex v-for="obj in getReleasesAsArray" :key="obj.id" xs12 sm6 md4 lg3 xl2>
       <Release
       :title="obj.title"
+      :artist="obj.artist"
       :linkYoutube="obj.linkYoutube"
       :linkSoundcloud="obj.linkSoundcloud"
       :linkAppleMusic="obj.linkAppleMusic"

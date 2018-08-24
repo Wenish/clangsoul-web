@@ -3,7 +3,9 @@
         <v-container fill-height fluid pa-2 class="shadow">
             <v-layout fill-height align-end justify-start>
                 <v-flex>
-                    <span class="title" v-text="title"></span>
+                    <span class="caption blue-grey--text text--lighten-3" v-text="artist"></span>
+                    <br/>
+                    <span class="title blue-grey--text text--lighten-5" v-text="title"></span>
                 </v-flex>
             </v-layout>
         </v-container>
@@ -11,16 +13,16 @@
     <v-card-actions>
         <v-spacer></v-spacer>
         <v-btn icon v-if="linkYoutube" :href="linkYoutube" target="_blank">
-            <v-icon color="red darken-2">mdi-youtube-play</v-icon>
+            <v-icon medium color="red darken-2">mdi-youtube-play</v-icon>
         </v-btn>
         <v-btn icon v-if="linkSoundcloud" :href="linkSoundcloud" target="_blank">
-            <v-icon color="orange darken-2">mdi-soundcloud</v-icon>
+            <v-icon medium color="orange darken-2">mdi-soundcloud</v-icon>
         </v-btn>
         <v-btn icon v-if="linkAppleMusic" :href="linkAppleMusic" target="_blank">
-            <v-icon color="grey darken-2">mdi-apple</v-icon>
+            <v-icon medium color="grey darken-2">mdi-apple</v-icon>
         </v-btn>
         <v-btn icon v-if="linkSpotify" :href="linkSpotify" target="_blank">
-            <v-icon color="green darken-2">mdi-spotify</v-icon>
+            <v-icon medium color="green darken-2">mdi-spotify</v-icon>
         </v-btn>
     </v-card-actions>
 </v-card>
