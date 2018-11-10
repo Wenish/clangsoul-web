@@ -25,16 +25,10 @@ export default {
             link: 'https://www.youtube.com/clangsoul'
           },
           {
-            icon: 'mdi-facebook',
-            color: 'blue darken-2',
-            text: 'Facebook',
-            link: 'https://www.facebook.com/clangsoul'
-          },
-          {
-            icon: 'mdi-soundcloud',
-            color: 'orange darken-2',
-            text: 'Soundcloud',
-            link: 'https://soundcloud.com/clangsoul'
+            icon: 'mdi-spotify',
+            color: 'teal darken-2',
+            text: 'Spotify',
+            link: 'https://open.spotify.com/artist/2UMPXGNnurwP45ae7lPdAG'
           },
           {
             icon: 'mdi-apple',
@@ -43,10 +37,16 @@ export default {
             link: 'https://itunes.apple.com/us/artist/clangsoul/1394721108'
           },
           {
-            icon: 'mdi-spotify',
-            color: 'teal darken-2',
-            text: 'Spotify',
-            link: 'https://open.spotify.com/artist/2UMPXGNnurwP45ae7lPdAG'
+            icon: 'mdi-soundcloud',
+            color: 'orange darken-2',
+            text: 'Soundcloud',
+            link: 'https://soundcloud.com/clangsoul'
+          },
+          {
+            icon: 'mdi-facebook',
+            color: 'blue darken-2',
+            text: 'Facebook',
+            link: 'https://www.facebook.com/clangsoul'
           }
         ]
     })
