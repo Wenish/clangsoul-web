@@ -14,3 +14,8 @@ npm run dev
 ```
 npm run build
 ```
+
+### deploy
+```
+firebase deploy
+```
