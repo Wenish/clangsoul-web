@@ -5,3 +5,7 @@
     background: linear-gradient(45deg, rgba(0,0,0,0.8) 0%,rgba(229,229,229,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#00e5e5e5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
+
+.filter {
+    filter: sepia(1);
+}
