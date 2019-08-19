@@ -1,6 +1,6 @@
 <template>
     <v-app dark>
-        <Toolbar/>
+        <!--<Toolbar/>-->
         <Content/>
     </v-app>
 </template>
